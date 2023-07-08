@@ -10,7 +10,6 @@ export function Soldier(props) {
   const group = useRef()
   const { nodes, materials, animations } = useGLTF('/models/Character_Soldier.gltf')
   const { actions } = useAnimations(animations, group)
-  console.log("Soldier",actions);
 
   useEffect(() => {
     actions["Walk_Shoot"].reset().fadeIn(0.5).play();

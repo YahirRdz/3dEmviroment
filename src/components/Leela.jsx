@@ -10,7 +10,6 @@ export function Leela(props) {
   const group = useRef()
   const { nodes, materials, animations } = useGLTF('/models/Leela.gltf')
   const { actions } = useAnimations(animations, group)
-  console.log("leela",actions);
 
   useEffect(() => {
     actions["Dance"].reset().fadeIn(0.5).play();
