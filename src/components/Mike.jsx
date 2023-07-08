@@ -13,8 +13,8 @@ export function Mike(props) {
   console.log("Mike",actions);
 
   useEffect(() => {
-    actions["Hello"].reset().fadeIn(0.5).play();
-    return () => actions["Hello"].fadeOut(0.5);
+    actions["Walk"].reset().fadeIn(0.9).play();
+    return () => actions["Walk"].fadeOut(0.9);
   },[])
   
   return (

@@ -12,6 +12,11 @@ export function Soldier(props) {
   const { actions } = useAnimations(animations, group)
   console.log("Soldier",actions);
 
+  useEffect(() => {
+    actions["Walk_Shoot"].reset().fadeIn(0.5).play();
+    return () => actions["Walk_Shoot"].fadeOut(0.5);
+  })
+  
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Scene">

@@ -13,8 +13,8 @@ export function Leela(props) {
   console.log("leela",actions);
 
   useEffect(() => {
-    actions["Hello"].reset().fadeIn(0.5).play();
-    return () => actions["Hello"].fadeOut(0.5);
+    actions["Dance"].reset().fadeIn(0.5).play();
+    return () => actions["Dance"].fadeOut(0.5);
   },[])
   return (
     <group ref={group} {...props} dispose={null}>
