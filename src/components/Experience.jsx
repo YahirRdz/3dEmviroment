@@ -3,7 +3,8 @@ import * as THREE from "three";
 import { Mike } from "./Mike";
 import { Leela } from "./Leela";
 import { Soldier } from "./Soldier";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { useFrame } from "@react-three/fiber";
 export const Experience = () => {
   const [active, setActive] = useState(null)
 
@@ -34,6 +35,7 @@ export const Experience = () => {
 const MonsterStage = ({children,texture,name, color, active, setActive, ...props}) => {
   const map = useTexture(texture)
   const portalMaterial = useRef()
+
   return(
     <group {...props}>
       <Text font="font/BlackFuture.otf" fontSize={0.3} position={[0, -1.3, 0.052]} anchorY={"bottom"}>
