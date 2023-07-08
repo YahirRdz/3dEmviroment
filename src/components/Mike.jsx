@@ -10,7 +10,7 @@ export function Mike(props) {
   const group = useRef()
   const { nodes, materials, animations } = useGLTF('/models/Mike.gltf')
   const { actions } = useAnimations(animations, group)
-  console.log(actions);
+  console.log("Mike",actions);
 
   useEffect(() => {
     actions["Hello"].reset().fadeIn(0.5).play();
